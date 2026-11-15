@@ -16,7 +16,9 @@ then run:  python exercises.py
 #   20
 # ---------------------------------------------------------------------------
 def print_evens():
-    raise NotImplementedError  # delete this line and write your code
+    for i in range(1, 21): # 0 index remember (20 inclusive)
+        if i % 2 == 0:
+            print(f"{i}")
 
 
 # ---------------------------------------------------------------------------
@@ -26,7 +28,10 @@ def print_evens():
 #   sum_to(4)  ->  10      (1 + 2 + 3 + 4)
 # ---------------------------------------------------------------------------
 def sum_to(n):
-    raise NotImplementedError  # delete this line and write your code
+    total = 0;
+    for i in range(n):
+        total += i + 1
+    return total
 
 
 # ---------------------------------------------------------------------------

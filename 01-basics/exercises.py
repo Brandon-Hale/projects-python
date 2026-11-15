@@ -17,8 +17,7 @@ Stuck? Peek at solutions.py, but try first!
 #   greeting("Ada")  ->  "Hello, Ada!"
 # ---------------------------------------------------------------------------
 def greeting(name):
-    raise NotImplementedError  # delete this line and write your code
-
+    return f"Hello, {name}!"
 
 # ---------------------------------------------------------------------------
 # Exercise 2: Average
@@ -26,8 +25,7 @@ def greeting(name):
 #   average(1, 2, 3)  ->  2.0
 # ---------------------------------------------------------------------------
 def average(a, b, c):
-    raise NotImplementedError  # delete this line and write your code
-
+    return (a + b + c) / 3
 
 # ---------------------------------------------------------------------------
 # Exercise 3: Minutes to hours
@@ -37,8 +35,10 @@ def average(a, b, c):
 #   minutes_to_hours(45)   ->  "0h 45m"
 # ---------------------------------------------------------------------------
 def minutes_to_hours(total_minutes):
-    raise NotImplementedError  # delete this line and write your code
+    hours = total_minutes // 60
+    minutes = total_minutes % 60
 
+    return f"{hours}h {minutes}m"
 
 # ---------------------------------------------------------------------------
 # Exercise 4: Is even?
@@ -47,8 +47,7 @@ def minutes_to_hours(total_minutes):
 #   is_even(7)  ->  False
 # ---------------------------------------------------------------------------
 def is_even(n):
-    raise NotImplementedError  # delete this line and write your code
-
+    return n % 2 == 0
 
 # ---------------------------------------------------------------------------
 # Exercise 5: Add numbers stored as text
@@ -57,7 +56,7 @@ def is_even(n):
 #   add_text_numbers("40", "2")  ->  42
 # ---------------------------------------------------------------------------
 def add_text_numbers(a, b):
-    raise NotImplementedError  # delete this line and write your code
+    return int(a) + int(b)
 
 
 # ---------------------------------------------------------------------------
@@ -66,7 +65,7 @@ def add_text_numbers(a, b):
 #   celsius_to_fahrenheit(100)  ->  212.0
 # ---------------------------------------------------------------------------
 def celsius_to_fahrenheit(celsius):
-    raise NotImplementedError  # delete this line and write your code
+    return celsius * 9 / 5 + 32
 
 
 # ---------------------------------------------------------------------------
@@ -76,7 +75,10 @@ def celsius_to_fahrenheit(celsius):
 #   swap(1, 2)  ->  (2, 1)
 # ---------------------------------------------------------------------------
 def swap(a, b):
-    raise NotImplementedError  # delete this line and write your code
+    temp = a
+    a = b
+    b = temp
+    return a, b
 
 
 # ---------------------------------------------------------------------------
@@ -88,7 +90,8 @@ def swap(a, b):
 #   type_name(None)   ->  "NoneType"
 # ---------------------------------------------------------------------------
 def type_name(value):
-    raise NotImplementedError  # delete this line and write your code
+    value_type = type(value).__name__
+    return value_type
 
 
 # ---------------------------------------------------------------------------
@@ -101,7 +104,8 @@ def type_name(value):
 #     Age: 36
 # ---------------------------------------------------------------------------
 def print_name_card(name, age):
-    raise NotImplementedError  # delete this line and write your code
+    print(f"Name: {name}")
+    print(f"Age: {age}")
 
 
 # =============================================================================

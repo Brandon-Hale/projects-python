@@ -40,7 +40,19 @@ def sum_to(n):
 #   90+ -> "A",  80-89 -> "B",  70-79 -> "C",  60-69 -> "D",  below 60 -> "F"
 # ---------------------------------------------------------------------------
 def grade(score):
-    raise NotImplementedError  # delete this line and write your code
+    grade = None
+    if score >= 90:
+        grade = "A"
+    elif score >= 80:
+        grade = "B"
+    elif score >= 70:
+        grade = "C"
+    elif score >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+
+    return grade
 
 
 # ---------------------------------------------------------------------------
@@ -52,8 +64,17 @@ def grade(score):
 #   otherwise the number as a string, e.g. "7"
 # ---------------------------------------------------------------------------
 def fizzbuzz(n):
-    raise NotImplementedError  # delete this line and write your code
+    fizz = n % 3 == 0
+    buzz = n % 5 == 0
 
+    if fizz and buzz:
+        return "FizzBuzz"
+    elif fizz:
+        return "Fizz"
+    elif buzz:
+        return "Buzz"
+
+    return f"{n}"
 
 # ---------------------------------------------------------------------------
 # Exercise 5: Countdown
@@ -65,8 +86,11 @@ def fizzbuzz(n):
 #     Liftoff!
 # ---------------------------------------------------------------------------
 def countdown(n):
-    raise NotImplementedError  # delete this line and write your code
+    while (n > 0):
+        print(n)
+        n = n - 1
 
+    print("Liftoff!")
 
 # ---------------------------------------------------------------------------
 # Exercise 6: First multiple
@@ -77,7 +101,10 @@ def countdown(n):
 #   first_multiple(1, 5, 10)   ->  None
 # ---------------------------------------------------------------------------
 def first_multiple(start, stop, divisor):
-    raise NotImplementedError  # delete this line and write your code
+    for i in range (start, stop):
+        if (i % divisor == 0):
+            return i
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -89,7 +116,10 @@ def first_multiple(start, stop, divisor):
 #   truthiness([])     ->  "falsy"
 # ---------------------------------------------------------------------------
 def truthiness(value):
-    raise NotImplementedError  # delete this line and write your code
+    if value:
+        return "truthy"
+    else:
+        return "falsy"
 
 
 # ---------------------------------------------------------------------------
@@ -100,7 +130,13 @@ def truthiness(value):
 #   "unknown" for anything else
 # ---------------------------------------------------------------------------
 def day_type(day):
-    raise NotImplementedError  # delete this line and write your code
+    match day:
+        case "Saturday" | "Sunday":
+            return "weekend"
+        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+            return "weekday"
+        case _:
+            return "unknown"
 
 
 # ---------------------------------------------------------------------------
@@ -112,7 +148,8 @@ def day_type(day):
 # (A trailing space before the newline is fine.)
 # ---------------------------------------------------------------------------
 def times_row(n):
-    raise NotImplementedError  # delete this line and write your code
+    for i in range(1, 6):
+        print(n * i, end=" ")
 
 
 # =============================================================================

@@ -17,8 +17,9 @@ the error message, it tells you exactly what's wrong with the signature.
 #   power(3)     ->  9
 #   power(2, 5)  ->  32
 # ---------------------------------------------------------------------------
-def power(base, exponent):
-    raise NotImplementedError  # delete this line and write your code
+def power(base, exponent=2):
+    val = pow(base, exponent)
+    return val
 
 
 # ---------------------------------------------------------------------------
@@ -29,8 +30,8 @@ def power(base, exponent):
 #   make_greeting("Ada", greeting="Hi")   ->  "Hi, Ada!"
 #   make_greeting("Ada", "Hi")            ->  TypeError (that's what we want!)
 # ---------------------------------------------------------------------------
-def make_greeting(name, greeting):
-    raise NotImplementedError  # delete this line and write your code
+def make_greeting(name, *, greeting="Hello"):
+    return f"{greeting}, {name}!"
 
 
 # ---------------------------------------------------------------------------
@@ -40,8 +41,8 @@ def make_greeting(name, greeting):
 #   total(1, 2, 3)  ->  6
 #   total()         ->  0
 # ---------------------------------------------------------------------------
-def total(numbers):
-    raise NotImplementedError  # delete this line and write your code
+def total(*numbers):
+    return sum(numbers)
 
 
 # ---------------------------------------------------------------------------
